@@ -3,6 +3,7 @@ const Types = {
   CREATE_ITEM: "CREATE_ITEM",
   DELETE_ITEM: "DELETE_ITEM"
 };
+
 // actions
 const createItem = (task: any) => ({
   type: Types.CREATE_ITEM,

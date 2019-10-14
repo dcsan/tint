@@ -1,6 +1,8 @@
+/*
 .App {
-  /* text-align: center; */
+  text-align: center;
 }
+*/
 
 .App-logo {
   height: 40vmin;
@@ -15,6 +17,7 @@
   justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 10px;
 }
 
 .App-link {
@@ -30,3 +33,4 @@ a:hover {
   text-decoration: underline;
   background-color: #888;
 }
+

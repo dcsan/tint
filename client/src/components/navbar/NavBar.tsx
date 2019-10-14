@@ -5,9 +5,10 @@ import './navbar.css'
 const NavBar = () => {
   return(
     <div className='nav-bar'>
-      <Link to='/home'>home</Link> |&nbsp;
-      <Link to='/editor'>editor</Link> |&nbsp;
-      <Link to='/chat'>chat</Link>
+      <Link className='nav-button' to='/home'>home</Link>
+      <Link className='nav-button' to='/editor'>editor</Link>
+      <Link className='nav-button' to='/chat'>chat</Link>
+      <Link className='nav-button' to='/todo'>todo</Link>
     </div>
   )
 }

@@ -1,8 +1,14 @@
 .nav-bar {
-  position: absolute;
+  /* position: absolute; */
+  background: #444;
   top: 0;
   left: 0;
-  padding: 10px;
   text-align: left;
   font-size: 12px;
 }
+
+.nav-button {
+  padding: 10px;
+  border-right: 1px solid white;
+}
+

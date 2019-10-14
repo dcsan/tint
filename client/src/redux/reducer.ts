@@ -9,10 +9,14 @@ const defaultState = {
 
 const todoReducer = (state = defaultState, action: any) => {
 
+  console.log('todoReducer', state, action)
+
   switch (action.type) {
 
     case ACTIONS.Types.CREATE_ITEM: {
-      console.log(action);
+      console.log('CREATE_ITEM', action);
+      console.log('state', state);
+      debugger
 
       let item = action.payload;
       let newItem = { id: state.items.length + 1, description: item };
@@ -29,6 +33,7 @@ const todoReducer = (state = defaultState, action: any) => {
     }
 
     default:
+      console.log('defaultState')
       return state;
   }
 };

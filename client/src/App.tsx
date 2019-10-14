@@ -15,22 +15,24 @@ import './App.css';
 
 
 // window.REDUX_INITIAL_DATA
-const REDUX_INITIAL_DATA = 1
+const REDUX_INITIAL_DATA = {
+  items: []
+}
 const reduxStore = configureStore( REDUX_INITIAL_DATA );
 
 const App: React.FC = () => {
   return (
     <ReduxProvider store={reduxStore}>
       <div className="App">
-        <header className="content">
           <Router>
-            <NavBar/>
+            <NavBar />
+            <div className='content'>
             <Route path="/home" exact={ true } component={ Home } />
             <Route path="/editor" component={Editor} />
             <Route path="/chat" component={Chat} />
             <Route path="/todo" component={ToDO} />
+            </div>
           </Router>
-        </header>
         </div>
       </ReduxProvider>
   );

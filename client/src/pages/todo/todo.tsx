@@ -31,7 +31,7 @@ const styles = (theme: any) => ({
     maxWidth: 752
   },
   demo: {
-    backgroundColor: theme.palette.background.paper
+    // backgroundColor: theme.palette.background.paper
   },
   title: {
     margin: `4px 0 2px`
@@ -60,6 +60,8 @@ class ToDO extends Component<Props, State> {
     if (!this.props.items) {
       return<div>loading</div>
     }
+    console.log('loaded')
+    // debugger
     return this.props.items.map( (item:any) => (
       <ListItem key={item.id}>
         <ListItemText primary={item.description} />
@@ -95,9 +97,13 @@ class ToDO extends Component<Props, State> {
   handleChange = (event: any) => {
     // FIXME
     // @ts-ignore
-    this.setState({
-      [event.target.name]: event.target.value
-    });
+    const name = event.target.name
+    const value = event.target.value
+    let obj = {}
+    // @ts-ignore
+    obj[name] = value
+    console.log('set', name, value)
+    this.setState(obj);
   };
 
   render() {
