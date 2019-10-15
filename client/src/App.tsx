@@ -15,6 +15,7 @@ import './App.css';
 
 
 // window.REDUX_INITIAL_DATA
+// FIXME
 const REDUX_INITIAL_DATA = {
   items: []
 }
